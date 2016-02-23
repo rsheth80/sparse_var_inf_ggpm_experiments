@@ -1,4 +1,0 @@
-2/21/16
-
-+   removed likCumLog.m and random_sample.m; if needed, they should be loaded 
-    from sparse_var_inf_ggpm/util/.

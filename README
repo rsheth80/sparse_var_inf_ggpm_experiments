@@ -1,27 +1,92 @@
-This is the code used to create figures for [1]. Run the startup file to add 
-paths in the correct order. The function 'random_sample' in the main directory 
-has changed in the latest version of 'sparse_var_inf_ggpm' so the original 
-'random_sample.m' file is included here for reproducibility. 
+This is the code used to create figures for [1]. It was validated by re-creating
+the top left plots of Figs. 2 and 3 and the left plots of Fig. 4 in [1]. Only 
+the first 5 inducing set sizes for the ucsdpeds1l count data set were used for 
+the validation. This output data is included in a zip file.
 
-This testing code was validated by re-creating the top left plots of Figs. 2 
-and 3 and the left plots of Fig. 4 in [1]. Only the first 5 inducing set sizes
-for the ucsdpeds1l count data set were used for the validation. This output data
-is included in a zip file.
+README Contents:
 
-The zip file holding the data needs to be unzipped to a sibling directory of the
-directory that this code resides in (or paths need to be appropriately modified
-in the sod_exp_gp*.m and sparse_exp_gp*.m files).
+1. Required Packages
+2. Setup
+3. References
+4. Included Files
 
-Rishit Sheth, 2/17/16
+Copyright (C) 2016  Rishit Sheth, 2/17/16
 
-*** Required packages ***
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+*** 1. Required Packages ***
 
     GPML toolbox    http://www.gaussianprocess.org/gpml/code/matlab/doc/
     minFunc         http://www.cs.ubc.ca/~schmidtm/Software/minFunc.html
 
 Tested with GPML toolbox v3.4 and minFunc_2012 on Matlab 2012a/b.
 
-*** References ***
+*** 2. Setup ***
+
+Run the startup file to add paths in the correct order. The function 
+'random_sample' in the main directory has changed in the latest version of 
+'sparse_var_inf_ggpm' so the original 'random_sample.m' file is included here 
+for reproducibility. Also, the original version of likCumLog.m is included for 
+the same reason.
+
+The zip file holding the data needs to be unzipped to a sibling directory of the
+directory that this code resides in (or paths need to be appropriately modified
+in the sod_exp_gp*.m and sparse_exp_gp*.m files).
+
+*** 3. References ***
 
 [1] Sheth, R., Wang, Y., Khardon R., Sparse variational inference for 
 generalized Gaussian process models, ICML 2015.
+
+*** 4. Included Files ***
+
+LICENSE
+README
+changes.txt
+compute_error_metric.m
+covMaternoneiso.m
+covMaternthreeiso.m
+covPolytwo.m
+covSEiso_dx.m
+data.zip
+define_learning_models.m
+define_minfunc_options.m
+doplots.m
+draw_gp_data.m
+eval_method_sod_gpc.m
+eval_method_sod_gpo.m
+eval_method_sod_gppr.m
+eval_method_sparse_gpc.m
+eval_method_sparse_gpo.m
+eval_method_sparse_gppr.m
+get_data_fold.m
+init_rand_seed.m
+ismatlab.m
+likCumLog.m
+make_pretty.m
+meanConst_dx.m
+mycvpartition.m
+myprinteps.m
+ord_disp_hyp.m
+outputs.zip
+outtrace_extract.m
+plot_error_logsize.m
+plot_error_size.m
+plot_error_time.m
+sod_exp_gpc.m
+sod_exp_gpo.m
+sod_exp_gppr.m
+sparse_exp_gpc.m
+sparse_exp_gpo.m
+sparse_exp_gppr.m
